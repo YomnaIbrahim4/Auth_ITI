@@ -1,3 +1,4 @@
+import 'package:auth_iti/screens/home_screen.dart';
 import 'package:auth_iti/screens/login_screen.dart';
 import 'package:auth_iti/screens/otp_screen.dart';
 import 'package:auth_iti/screens/splash_screen.dart';
@@ -33,12 +34,13 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      initialRoute: SplashScreen.routeName,
+      initialRoute: HomeScreen.routeName,
 
       routes: {
         SplashScreen.routeName: (context) => SplashScreen(),
         LoginScreen.routeName: (context) => LoginScreen(),
         OtpScreen.routeName: (context) => OtpScreen(),
+        HomeScreen.routeName: (context) => HomeScreen()
       },
     );
   }

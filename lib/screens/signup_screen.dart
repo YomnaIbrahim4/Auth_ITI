@@ -3,9 +3,9 @@ import 'package:auth_iti/custom/custom_text_field.dart';
 import 'package:auth_iti/screens/otp_screen.dart';
 import 'package:flutter/material.dart';
 
-class LoginScreen extends StatelessWidget {
+class SignupScreen extends StatelessWidget {
   static const String routeName = "login_screen";
-  const LoginScreen({super.key});
+  const SignupScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,40 +31,27 @@ class LoginScreen extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      const Text(
-                        'أهلاً بك، نحن سعداء بعودتك\nمن فضلك قم بتسجيل الدخول',
+                      Text(
+                        'اهلا بك من فضلك قم بعمل حساب خاص بك',
                         style: TextStyle(
-                          fontSize: 20,
-                          color: Colors.white,
                           fontWeight: FontWeight.bold,
-                          height: 1.6,
+                          color: Colors.white,
+                          fontSize: 20,
                         ),
-                        textAlign: TextAlign.center,
                       ),
-                      const SizedBox(height: 30),
+                      const SizedBox(height: 25),
+                      CustomTextField(hintWord: 'البريد الالكتروني',preIconData: Icons.email,),
+                      const SizedBox(height: 15),
                       CustomTextField(hintWord: 'رقم الهاتف',preIconData: Icons.person_outline,),
-                      const SizedBox(height: 16),
+                      const SizedBox(height: 15),
                       CustomTextField(hintWord: 'كلمة المرور', preIconData: Icons.lock_outline,
                         suffIconData: Icons.visibility_outlined,isObsecured: true,),
                       const SizedBox(height: 10),
+                      CustomTextField(hintWord: ' تأكيد كلمة المرور', preIconData: Icons.lock_outline,
+                        suffIconData: Icons.visibility_outlined,isObsecured: true,),
 
-                      Align(
-                        alignment: Alignment.centerRight,
-                        child: GestureDetector(
-                          onTap: (){
-                            Navigator.of(context).pushNamed(OtpScreen.routeName);
-                          },
-                          child: Text(
-                            'هل نسيت كلمة المرور ؟',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontWeight: FontWeight.w500,
 
-                            ),
-                          ),
-                        ),
-                      ),
-                      const SizedBox(height: 24),
+                      const SizedBox(height: 25),
                       SizedBox(
                         width: double.infinity,
                         height: 50,
@@ -92,8 +79,8 @@ class LoginScreen extends StatelessWidget {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          CustomText(text: ' إنشاء حساب', color: Colors.white,),
-                          CustomText(text: "  ليس لديك حساب ؟  ", color: Colors.black,),
+
+                          CustomText(text: "   لديك حساب ؟  قم بعمل تسجيل دخول ", color: Colors.white,),
                         ],
                       ),
                     ],

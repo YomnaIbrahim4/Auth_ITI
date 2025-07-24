@@ -14,6 +14,7 @@ class OtpScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Color(0xFF007E9F),
         iconTheme: IconThemeData(
           color: Colors.black
         ),
